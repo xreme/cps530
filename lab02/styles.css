@@ -1,0 +1,120 @@
+body{
+    background-color: rgb(45, 45, 45);
+    color: whitesmoke;
+}
+h1{
+    font-family: "Sixtyfour Convergence", sans-serif;
+    color: whitesmoke;
+}
+h2{
+    font-family: "Sixtyfour Convergence", sans-serif;
+    color: yellowgreen;
+}
+h3{
+    font-family: "Sixtyfour Convergence", sans-serif;
+}
+p{
+    font-family: "Sixtyfour Convergence", sans-serif;
+}
+ol{
+    font-family: "Sixtyfour Convergence", sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: row;
+
+}
+a{
+    color: greenyellow;
+    text-decoration: none;
+    font-family:"Sixtyfour Convergence", sans-serif; 
+}
+nav{
+    background-color: blue;
+    margin: 20px;
+}
+.mainCol{
+    flex: 2;
+}
+main section:hover {
+    background-color: rgb(53, 65, 40);
+}
+.mainCol figcaption{
+    background-color: blue;
+}
+a:hover{
+    color: black;
+}
+.mainCol img:hover{
+    animation-name: shake;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+}
+
+#figure1 {
+    background-image: url('assets/kirby-headphones.gif');
+    background-size: 80px; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+#figure3 {
+    background-image: url('assets/297l8kz0ysba1.png');
+    background-size: 100px; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+#box1 {
+    opacity: 1;
+    transition: opacity .5s ease-in-out, visibility 1s ease-in-out;
+}
+#box1:target{
+    opacity: .5;
+    animation: none;
+}
+
+#box2 {
+    transform: rotate(0deg);
+    transition: transform .8s ease-in-out;
+}
+#box2:target {
+    transform: rotate(110deg);
+    animation: none;
+}
+#box3 {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
+}
+
+#box3:target {
+    opacity: 0;
+    visibility: hidden;
+    animation: none;
+}
+
+#instruct{
+    margin: 20px;
+    padding-inline: 20px;
+    background-color: blue;
+}
+li::marker{
+    color: red;
+}
+#instruct h3{
+    color:red
+}
