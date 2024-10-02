@@ -22,7 +22,6 @@ ol{
 main{
     display: flex;
     flex-direction: row;
-
 }
 a{
     color: greenyellow;
@@ -33,38 +32,38 @@ nav{
     background-color: blue;
     margin: 20px;
 }
-.mainCol{
-    flex: 2;
-}
 main section:hover {
     background-color: rgb(53, 65, 40);
 }
-.mainCol figcaption{
-    background-color: blue;
-}
 a:hover{
     color: black;
+}
+li::marker{
+    color: red;
+}
+.mainCol{
+    flex: 2;
+}
+.mainCol figcaption{
+    background-color: blue;
 }
 .mainCol img:hover{
     animation-name: shake;
     animation-duration: .5s;
     animation-iteration-count: infinite;
 }
-
 #figure1 {
     background-image: url('assets/kirby-headphones.gif');
     background-size: 80px; 
     background-position: center; 
     background-repeat: no-repeat;
 }
-
 #figure3 {
     background-image: url('assets/297l8kz0ysba1.png');
     background-size: 100px; 
     background-position: center; 
     background-repeat: no-repeat;
 }
-
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -111,9 +110,6 @@ a:hover{
     margin: 20px;
     padding-inline: 20px;
     background-color: blue;
-}
-li::marker{
-    color: red;
 }
 #instruct h3{
     color:red
