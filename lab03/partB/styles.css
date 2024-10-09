@@ -1,0 +1,99 @@
+body {
+    background-color: rgb(0, 38, 84);
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+div img{
+    width: 100%;
+    display: block;
+}
+
+nav{
+    display: flex;
+    outline: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+nav a{
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+}
+h1{
+    color: white;
+    font-size: 4vw;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+p{
+    color: white;
+    width: 90%;
+    font-size: 16px;
+}
+ul{
+    color: white;
+    width: 90%;
+    font-size: 16px; 
+}
+
+.mainImage{
+    position: relative;
+    max-height: 700px;
+    overflow: hidden;
+}
+
+.overlay-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(243, 0, 0);
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.overlay-text:hover{
+    color: blue;
+}
+.overlay-text-large{
+    position: absolute;
+    top: 18%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.overlay-shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .6;
+}
+.text-image-container{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+}
+.text-image-item{
+    flex: 1;
+}
+.image-grid{
+    display: flex;
+    flex-direction: column;
+}
+.grid-image-container{
+    position: relative;
+    outline: 2px solid black;
+    max-height: 200px;
+    width: 95%;
+    overflow: hidden;
+}
+.grid-image-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
