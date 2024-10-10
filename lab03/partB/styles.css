@@ -1,8 +1,5 @@
 body {
-    background-color: rgb(0, 38, 84);
-    display: flex;
-    justify-content: center;
-    margin: 0;
+  background-color: rgb(0, 38, 84);
 }
 div img{
     width: 100%;
@@ -28,7 +25,6 @@ h1{
 }
 p{
     color: white;
-    width: 90%;
     font-size: 16px;
 }
 ul{
@@ -59,9 +55,8 @@ ul{
     position: absolute;
     top: 18%;
     left: 18%;
-    transform: translate(-50%, -50%);
-    color: red;
-    font-size: 1.5rem;
+    transform: translate(-20%, -50%);
+    color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 .overlay-shadow{
@@ -70,6 +65,7 @@ ul{
     height: 100%;
     background-color: black;
     opacity: .6;
+
 }
 .text-image-container{
     display: flex;
@@ -77,23 +73,40 @@ ul{
     justify-items: center;
     align-items: center;
     margin: 0;
+    overflow: hidden;
 }
 .text-image-item{
     flex: 1;
 }
-.image-grid{
-    display: flex;
-    flex-direction: column;
-}
 .grid-image-container{
     position: relative;
-    outline: 2px solid black;
-    max-height: 200px;
-    width: 95%;
+    height: 200px;
     overflow: hidden;
+    margin: 0px;
+    border: 2px solid white;
+
 }
 .grid-image-image{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+  
+@media only screen and (min-width: 576px) {
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and(min-width: 992px) {
+    p {
+        font-size: 1.6rem;
+    }
 }

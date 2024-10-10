@@ -74,10 +74,11 @@ ul{
     position: absolute;
     top: 18%;
     left: 18%;
-    transform: translate(-50%, -50%);
-    color: red;
-    font-size: 1.5rem;
+    transform: translate(-30%, -50%);
+    color: white;
+    font-size: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    line-height: 10px;
 }
 .overlay-shadow{
     position: absolute;
@@ -131,14 +132,13 @@ ul{
         height: 300px;
         position: relative;
         outline: 2px solid red;
-
         overflow: hidden;
     }
     .overlay-text-large{
-        font-size: 3em;
+        font-size: 1.6em;
     }
     ul{
-        color: red;
+        color: white;
         width: 90%;
         font-size: 16px; 
     }
@@ -169,7 +169,7 @@ ul{
         overflow: hidden;
     }
     .overlay-text-large{
-        font-size: 4em;
+        font-size: 2.2em;
     }
 }
 @media screen and (min-width: 1200px){
@@ -183,7 +183,7 @@ ul{
         font-size: 22px; 
     }
     .overlay-text-large{
-        font-size: 5em;
+        font-size: 2.4em;
     }
 }
 @media only screen and (min-width: 1600px) {
@@ -204,6 +204,6 @@ ul{
         font-size: 30px; 
     }
     .overlay-text-large{
-        font-size: 6em;
+        font-size: 3em;
     }
 }
