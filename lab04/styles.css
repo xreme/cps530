@@ -1,0 +1,24 @@
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    background-color: aliceblue;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+button{
+    margin: 3px;
+}
+footer{
+    margin: 20px;
+}
+.icon img{
+    width: 10px;
+}
