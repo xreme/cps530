@@ -1,0 +1,35 @@
+form{
+    background-color: aliceblue;
+    padding: 20px;
+    outline: 2px solid black;
+}
+textarea{
+    resize: none;
+    width: 80%;
+}
+.preview{
+    height: 150px;
+}
+div{
+
+}
+.close{
+    visibility: hidden;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 4;
+    width: 10%;
+}
+.cover{
+    background-color: black;
+    opacity: 50%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    visibility: hidden;
+}

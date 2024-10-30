@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 05</title>
+        <script src="./script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="./jqScript.js"></script>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div class ="cover"></div>
+        <h1>
+           CONFIRM ORDER
+        </h1>
+        <section>
+            <form name="info">
+            <h2>
+                Contact Information
+            </h2>
+                <div>
+                    <div>
+                        <h4>First Name</h4>
+                        <input type="text" name="firstName">
+                    </div>
+                    <div>
+                        <h4>Last Name</h4>
+                        <input type="text" name="lastName">
+                    </div>
+                </div>
+                <div>
+                    <h4>Email</h4>
+                    <input type="text" name="email" > 
+                </div>
+                <div>
+                    <h4>Phone Number</h4>
+                    <input type="tel" placeholder="(999) 999-9999" size="16" maxlength="14" name="phoneNumber">
+                </div>
+                <div>
+                    <h2>
+                        Shipping Information
+                    </h2>
+                    <h4>
+                        Adress Line 1
+                    </h4>
+                    <input type="text" name="addr1">
+                    <h4>
+                        Address Line 2
+                    </h4>
+                    <input type = "text" name="addr2">
+                </div>
+                <div>
+                    <h3>
+                        Special Instructions
+                    </h3>
+                    <div>
+                        <textarea rows="3" name="specialInstructs" oninput="updateCounts()"></textarea>
+                        <p id="charCount">Lengtht: / 300</p>
+                        <p id="letterCount">Letter Count: 0</p>
+                    </div>
+                </div>
+                <div>
+                    <h2>
+                        Items:
+                    </h2>
+
+                    <div>
+                        <h4>1x Tesla Bot</h2>
+                        <img src="./images/teslarobot1.png" class="preview">
+                        <img src="./images/teslabot2.jpg" class="preview">
+                        <img src="./images/teslabot3.webp" class="preview">
+                        <img src="./images/close_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" class="close">
+                    </div>
+                </div>
+                <div>
+                    <input type="button" value="SUBMIT" onclick="validateForm()">
+                </div>
+            </form>
+            <p id="errors"></p>
+        </section>
+        <section style="background-color: beige;">
+            <h1>
+                Order Information
+            </h1>
+            <div>
+                <h3>
+                    Full Name
+                </h3>
+                <p id="labelFullName">
+                    NULL
+                </p>
+            </div>
+            <div>
+                <h3>
+                    Email Address
+                </h3>
+                <p id="labelEmail">
+                    NULL
+                </p>
+            </div>
+            <div>
+                <h3>
+                    Phone Number
+                </h3>
+                <p id="labelPhone">
+                    NULL
+                </p>
+            </div>
+            <div>
+                <h3>Shipping Information</h3>
+                <p id="labelAddress"> NULL</p>
+                <p id="labelInstructions">NULL</p>
+            </div>
+            <div>
+                <h3>Items</h3>
+                <p>TESLA BOT</p>
+                <button onclick="displayResults()"></button>
+            </div>
+        </section>
+        <footer>
+            <!-- <center>
+                 <img src="./images/kirby-headphones.gif">
+                <br>
+                Osereme Ibazebo 2024©
+            </center> -->
+        </footer>
+    </body>
+</html>
