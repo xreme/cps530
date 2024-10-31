@@ -1,18 +1,56 @@
-form{
-    background-color: aliceblue;
-    padding: 20px;
-    outline: 2px solid black;
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0;
+    height: 100%;
+    background-image: url("./images/oak-3275-mm-architextures.jpg");
+    font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    font-family: 'Shadows Into Light'
 }
 textarea{
     resize: none;
     width: 80%;
+    font-family: 'Shadows Into Light'
+}
+
+.formSection{
+    outline: solid blue 2x;
+    display: flex;
+    align-items: center;
+}
+.formSection input{
+    height: 4ch;   
+    margin-left: 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+}
+.leftInput{
+    margin-right: 30px;
+}
+.formSection textarea{
+    background-color: transparent;
+    margin-left: 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    line-height: 0;
+    outline: 2px sold red;
+    height: 100%;
 }
 .preview{
-    height: 150px;
+    height: 100px;
+    border: 10px solid white;
 }
-div{
 
-}
 .close{
     visibility: hidden;
     position: absolute;
@@ -32,4 +70,44 @@ div{
     left: 0;
     z-index: 2;
     visibility: hidden;
+}
+#mainInput{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    background-image: url("./images/textured-paper.png");
+    padding: 20px;
+    width: 550px;
+    height: 700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.imagesPreview{
+    outline: solid red 2x;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#done:hover{
+    color: green;
+}
+#errors{
+    color: red;
+}
+footer{
+    background-color: rgba(245, 245, 220, 0.41);
+    width: 100%;
+    padding: 10px;
+}
+#twoCol{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.output{
+    background-color: beige;
+    height: 325px;
+    width: 400px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); 
 }

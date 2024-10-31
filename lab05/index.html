@@ -6,122 +6,126 @@
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
         <script src="./jqScript.js"></script>
         <link rel="stylesheet" href="./styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
     </head>
     <body>
+        <h1>LAB 05</h1>
         <div class ="cover"></div>
-        <h1>
-           CONFIRM ORDER
-        </h1>
-        <section>
-            <form name="info">
-            <h2>
-                Contact Information
-            </h2>
-                <div>
-                    <div>
-                        <h4>First Name</h4>
-                        <input type="text" name="firstName">
-                    </div>
-                    <div>
-                        <h4>Last Name</h4>
+        <div id="twoCol">
+
+            <section id = "mainInput">
+                <center>
+                    <h2>
+                       ORDER FORM
+                    </h2>
+                </center>
+                <form name="info">
+                    <h2>
+                        Contact Information
+                    </h2>
+                    <div class="formSection">
+                        <h4>First Name:</h4>
+                        <input type="text" name="firstName"  class="leftInput">
+                        <h4>Last Name:</h4>
                         <input type="text" name="lastName">
                     </div>
-                </div>
-                <div>
-                    <h4>Email</h4>
-                    <input type="text" name="email" > 
-                </div>
-                <div>
-                    <h4>Phone Number</h4>
-                    <input type="tel" placeholder="(999) 999-9999" size="16" maxlength="14" name="phoneNumber">
-                </div>
-                <div>
+                    <div class="formSection">
+                        <h4>Email:</h4>
+                        <input type="text" name="email" placeholder="example@email.com"  class="leftInput"> 
+                        <h4>Phone Number:</h4>
+                        <input type="tel" placeholder="(999) 999-9999" size="16" maxlength="14" name="phoneNumber">
+                    </div>
                     <h2>
                         Shipping Information
                     </h2>
-                    <h4>
-                        Adress Line 1
-                    </h4>
-                    <input type="text" name="addr1">
-                    <h4>
-                        Address Line 2
-                    </h4>
-                    <input type = "text" name="addr2">
-                </div>
-                <div>
-                    <h3>
-                        Special Instructions
-                    </h3>
-                    <div>
-                        <textarea rows="3" name="specialInstructs" oninput="updateCounts()"></textarea>
-                        <p id="charCount">Lengtht: / 300</p>
-                        <p id="letterCount">Letter Count: 0</p>
+                    <div class="formSection">
+                        <h4>
+                            Adress Line 1
+                        </h4>
+                        <input type="text" name="addr1" class="leftInput">
+                        <h4>
+                            Address Line 2
+                        </h4>
+                        <input type = "text" name="addr2">
                     </div>
-                </div>
-                <div>
-                    <h2>
-                        Items:
-                    </h2>
-
+                    <div class="formSection">
+                        <h3>
+                            Special Instructions:
+                        </h3>
+                        <div style="width: 50%">
+                            <textarea rows="2" name="specialInstructs" oninput="updateCounts()"></textarea>
+                        </div>
+                    </div>
+                    <div class="formSection">
+                        <div>
+                            <p id="charCount">Lengtht: / 300</p>
+                            <p id="letterCount">Letter Count: 0</p>
+                        </div>
+                    </div>
                     <div>
+                        <h2>
+                            Items:
+                        </h2>
+    
                         <h4>1x Tesla Bot</h2>
-                        <img src="./images/teslarobot1.png" class="preview">
-                        <img src="./images/teslabot2.jpg" class="preview">
-                        <img src="./images/teslabot3.webp" class="preview">
-                        <img src="./images/close_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" class="close">
+                        <div class="imagesPreview">
+                            <div></div>
+                            <img src="./images/teslarobot1.png" class="preview">
+                            <img src="./images/teslabot2.jpg" class="preview">
+                            <img src="./images/teslabot3.webp" class="preview">
+                            <img src="./images/close_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" class="close">
+                        </div>
                     </div>
-                </div>
+                    <div>
+                        <center><h4 onclick="validateForm()" id="done">DONE</h4></center>
+                        <center><p id="errors"></p></center> 
+                    </div>
+                </form>
+              
+            </section>
+            <section class="output">
+                <h3>
+                    SHIP TO:
+                </h3>
                 <div>
-                    <input type="button" value="SUBMIT" onclick="validateForm()">
+                    <p id="labelFullName">
+                        _____________________
+                    </p>
+                    <p id="labelAddress">  _____________________ </p>
+                    <h4>
+                        Special Instructions:
+                    </h4>
+                    <p id="labelInstructions">  _____________________ </p>
                 </div>
-            </form>
-            <p id="errors"></p>
-        </section>
-        <section style="background-color: beige;">
-            <h1>
-                Order Information
-            </h1>
-            <div>
-                <h3>
-                    Full Name
-                </h3>
-                <p id="labelFullName">
-                    NULL
-                </p>
-            </div>
-            <div>
-                <h3>
-                    Email Address
-                </h3>
-                <p id="labelEmail">
-                    NULL
-                </p>
-            </div>
-            <div>
-                <h3>
-                    Phone Number
-                </h3>
-                <p id="labelPhone">
-                    NULL
-                </p>
-            </div>
-            <div>
-                <h3>Shipping Information</h3>
-                <p id="labelAddress"> NULL</p>
-                <p id="labelInstructions">NULL</p>
-            </div>
-            <div>
-                <h3>Items</h3>
-                <p>TESLA BOT</p>
-                <button onclick="displayResults()"></button>
-            </div>
-        </section>
+                <hr>
+                <div>
+                    <p id="labelEmail">
+                        _____________________
+                    </p>
+                    <p id="labelPhone">
+                        _____________________
+                    </p>
+                </div>
+                <hr>
+                <div>
+                    <h4>Items</h3>
+                    <p>1x TESLA BOT</p>
+                </div>
+                <hr>
+                <center>
+                    <img src="./images/—Pngtree—black and white icons of_7554658.png" style="width: 50%;">
+                </center>
+            </section>
+        </div>
         <footer>
-            <!-- <center>
-                 <img src="./images/kirby-headphones.gif">
+            <center>
+                <img src="./images/kirby-headphones.gif" style="width: 100px; padding: 10px;">
                 <br>
                 Osereme Ibazebo 2024©
-            </center> -->
+                <br>
+            </center>
         </footer>
     </body>
 </html>

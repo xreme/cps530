@@ -32,10 +32,10 @@ function validateEmail(){
 function validateForm(){
     let errors = {'firstName': false, 'lastName':false, 'phoneNumber':false, 'email': false}
     var errorStr = ''
-    if (!validateFirstName()) {errors.firstName = true; errorStr+='•first name '}
-    if (!validateLastName()) {errors.lastName = true; errorStr+='•last name '}
-    if (!validatePhoneNumber()) {errors.phoneNumber = true; errorStr+='•phone number '}
-    if (!validateEmail()) {errors.email = true; errorStr+='•email '}
+    if (!validateFirstName()) {errors.firstName = true; errorStr+='-first name '}
+    if (!validateLastName()) {errors.lastName = true; errorStr+='-last name '}
+    if (!validatePhoneNumber()) {errors.phoneNumber = true; errorStr+='-phone number '}
+    if (!validateEmail()) {errors.email = true; errorStr+='-email '}
     console.log(errors)
     if (!errors.firstName && !errors.lastName && !errors.phoneNumber && !errors.email){
         displayErrors(null)
@@ -46,8 +46,10 @@ function validateForm(){
     }
 }
 function displayErrors(string){
+    console.log('here')
     labelErrors = document.getElementById("errors")
-    if (string) labelErrors.innerHTML = 'Mistakes: ' + string
+    if (string) labelErrors.innerHTML = 'fields to fix: ' + string
+    else labelErrors.innerHTML = ''
 }
 function updateCounts(){
     let textBoxText = document.forms['info']['specialInstructs'].value
