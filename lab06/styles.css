@@ -1,0 +1,61 @@
+circle {
+    mix-blend-mode: multiply;
+}
+h1{
+    font-family: "Permanent Marker"
+}
+
+#whiteBoard{
+    width: 100%;
+    height: 100%;
+    outline: solid green 3px;
+    background-color: rgb(71, 142, 71);
+    background-image:url("./assets/green-dust-and-scratches.png") ;
+}
+
+text{
+    color: white;
+}
+#whiteBoardBG{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 1000px;
+    background-image: url("./assets/oak-3275-mm-architextures.jpg");
+}
+body{
+    background-color:rgb(151, 206, 255);
+}
+#projectorScreen{
+    background-color: azure;
+    padding: 20px;
+}
+#projectorBackground{
+    background-color: black;
+    padding: 10px;
+    max-width: 350px;
+}
+section{
+    line-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    overflow: scroll;
+    gap: 50px;
+}
+section:hover{
+    outline: solid red 3px;
+}
+#t3W{
+    background-color: aliceblue;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
