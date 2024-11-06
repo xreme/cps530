@@ -47,6 +47,7 @@ main{
     align-items: center;
     justify-content: center;
     height: 60vh;
+    min-height: 600px;
     overflow: scroll;
     gap: 50px;
 }
