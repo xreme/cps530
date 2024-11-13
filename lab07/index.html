@@ -2,13 +2,85 @@
 <html>
     <head>
         <title>
-            Lab 071
+            Lab 07
         </title>
     </head>
     <body>
-	    <form action="https://www2.cs.torontomu.ca/~osibazeb/cgi-bin/name.pl" method="post">
-            Name: <input type="text" name="name" style="width:300px;">
-            <input type="submit">
-        </form>    
+        <div class ="cover"></div>
+        <div id="twoCol">
+
+            <section id = "mainInput">
+                <center>
+                    <h2>
+                       Address Book
+                    </h2>
+                </center>
+                <form name="info">
+                    <h2>
+                        Contact Information
+                    </h2>
+                    <div>
+                        <input type="file" name="picture">
+                    </div>
+                    <div class="formSection">
+                        <h4>First Name:</h4>
+                        <input type="text" name="firstName"  class="leftInput">
+                        <h4>Last Name:</h4>
+                        <input type="text" name="lastName">
+                    </div>
+                    <div class="formSection">
+                        <h4>Email:</h4>
+                        <input type="text" name="email" placeholder="example@email.com"  class="leftInput"> 
+                        <h4>Phone Number:</h4>
+                        <input type="tel" placeholder="(999) 999-9999" size="16" maxlength="14" name="phoneNumber">
+                    </div>
+                    <h2>
+                        Address
+                    </h2>
+                    <div class="formSection">
+                        <h4>
+                            Address Line 1:
+                        </h4>
+                        <input type="text" name="addr1" class="leftInput" placeholder="11 Springfield Drive">
+                        <h4>
+                            Address Line 2:
+                        </h4>
+                        <input type = "text" name="addr2" placeholder="Unit 803">
+                        <h4>
+                            Postal Code
+                        </h4>
+                        <input type = "text" name="postalCode" placeholder="A1B 2C3" />
+                        <h4>
+                            Province
+                        </h4>
+                        <select>
+                            <option value="Alberta">Alberta</option>
+                            <option value="British Columbia">British Columbia</option>
+                            <option value="Manitoba">Manitoba</option>
+                            <option value="New Brunswick">New Brunswick</option>
+                            <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                            <option value="Nova Scotia">Nova Scotia</option>
+                            <option value="Ontario">Ontario</option>
+                            <option value="Prince Edward Island">Prince Edward Island</option>
+                            <option value="Quebec">Quebec</option>
+                            <option value="Saskatchewan">Saskatchewan</option>
+                            <option value="Northwest Territories">Northwest Territories</option>
+                            <option value="Nunavut">Nunavut</option>
+                            <option value="Yukon">Yukon</option> 
+                        </select>
+                    </div>
+                    <div>
+                        <input type="submit">
+                    </div>
+                </form>
+              
+            </section>
+        </div>
+        <footer>
+            <center>
+                Osereme Ibazebo 2024©
+                <br>
+            </center>
+        </footer>
     </body>
 </html>
