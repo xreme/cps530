@@ -1,0 +1,74 @@
+body{
+    display: flex;
+    height: 100%;
+    background-image: url("./Image\ from\ Imgur.jpg");
+    flex-direction: column;
+    align-items: center;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 90vh;
+    border: px solid red;
+}
+#mainInput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2{
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: 5px solid rgba(0, 0, 0, 0.958);
+    width: 80%;
+    background-color: rgb(82, 189, 242);
+    border-radius: 5%;
+    padding: 20px;
+}
+div{
+    outline: px solid black;
+}
+section{
+    width: 80%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    outline: solid blue px;
+    gap: 30px;
+    margin: 10px;
+    background-color: rgba(4, 4, 4, 0.109);
+    border-radius: 20px;
+    padding: 10px;
+
+}
+section *{
+    color: white;
+    font-size: 20px;
+}
+.formField {
+    margin: 0; 
+    padding: 0; 
+}
+
+.formField p {
+    margin: 0; 
+    padding: 0; 
+}
+
+.formField input, select{
+    margin: 0; 
+    padding: 0;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid white;
+}
+.secGroup{
+    display: flex;
+    gap: 30px;
+}
