@@ -11,8 +11,7 @@ print <<"HTML";
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
 </head>
-<div style="flex-direction:column;display:flex;justify-content: center;height:80vh;align-items:center;">
-<h1 style="font-size: 60px; color:Red;font-family:Rubik Mono One"> Hi, </h1>
+<div style="flex-direction:column;display:flex;height:80vh;align-items:center;">
 <h1 style="font-size: 60px; color:Red;font-family:Rubik Mono One"> 
     THIS IS MY FIRST PERL PROGRAM
 </h1>
