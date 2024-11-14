@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Lab 07
+        </title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div class ="cover"></div>
+        <main>
+            <form name="info" method="post" action = "https://www2.cs.torontomu.ca/~osibazeb/cgi-bin/lab07b.cgi" enctype="multipart/form-data">
+                <section>
+                    <h2>
+                        REGISTER
+                    </h2>
+                </section>
+                <section>
+                    <input type="file" name="picture">
+                </section>
+                <section>
+                    <div class="formField">
+                        <p>First Name</p>
+                        <input type="text" name="firstName"  class="leftInput" placeholder="John" size="20" >
+                    </div>
+                    <div class="formField">
+                        <p>Last Name</p>
+                        <input type="text" name="lastName" placeholder="Smith"  size="20">
+                    </div>
+                </section>
+                <section>
+                    <div class="formField">
+                        <p>Email</p>
+                        <input type="text" name="email" placeholder="example@email.com"  size="25">   
+                    </div>
+                    <div class="formField">
+                        <p>Phone Number</p>
+                        <input type="tel" placeholder="9999999999" size="20" maxlength="14" name="phoneNumber">
+                    </div>
+                </section>
+                <section style="flex-direction: column;">
+                    <div class="secGroup">
+                        <div class="formField">
+                            <p>Address Line 1</p>
+                            <input type="text" name="addr1" class="leftInput" placeholder="11 Springfield Drive"> 
+                        </div>
+                        <div class="formField">
+                            <p>Address Line 2 </p>
+                            <input type = "text" name="addr2" placeholder="Unit 803">
+                        </div>
+                        <div class="formField">
+                            <p>Postal Code</p>
+                            <input type = "text" name="postalCode" placeholder="A1B 2C3" />
+                        </div>
+                    </div>
+                    <div class="secGroup">
+                        <div class="formField">
+                            <p>City</p>
+                            <input type = "text" name="city" placeholder="toronto"> 
+                        </div>
+                        <div class="formField">
+                            <p>Province</p>
+                            <select name="province">
+                                <option value="Alberta">Alberta</option>
+                                <option value="British Columbia">British Columbia</option>
+                                <option value="Manitoba">Manitoba</option>
+                                <option value="New Brunswick">New Brunswick</option>
+                                <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                                <option value="Nova Scotia">Nova Scotia</option>
+                                <option value="Ontario">Ontario</option>
+                                <option value="Prince Edward Island">Prince Edward Island</option>
+                                <option value="Quebec">Quebec</option>
+                                <option value="Saskatchewan">Saskatchewan</option>
+                                <option value="Northwest Territories">Northwest Territories</option>
+                                <option value="Nunavut">Nunavut</option>
+                                <option value="Yukon">Yukon</option> 
+                            </select> 
+                        </div>
+                    </div>
+                </section>
+                <div>
+                    <input type="submit">
+                </div>
+            </form>
+        </main>
+        <footer>
+            <center>
+                Osereme Ibazebo 2024©
+                <br>
+            </center>
+        </footer>
+    </body>
+</html>
