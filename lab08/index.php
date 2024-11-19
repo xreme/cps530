@@ -15,19 +15,19 @@
 
     if ($hour >= 21 || $hour < 5){
         $message = "<h1>GOOD NIGHT</h1>";
-        $image = "night"
+        $image = "night";
     }
     elseif ($hour >= 18){
         $message = "<h1>GOOD EVENING</h1>";
-        $image = "evening"
+        $image = "evening";
     }
     elseif ($hour >= 12){
         $message = "<h1>GOOD AFTERNOON</h1>";
-        $image = "afternoon"
+        $image = "afternoon";
     }
     else{
         $message = "<h1>GOOD MORNING</h1>";
-        $image = "morning"
+        $image = "morning";
     }
 
     echo <<<T1
