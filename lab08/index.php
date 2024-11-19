@@ -12,7 +12,8 @@
             </H1>
            <div>
             <?php 
-                echo 'the date is ' . date("m/y/d/H/A");
+                $a= date("H");
+                echo 'the hour is ' . $a ;
             ?>
            </div> 
         </div>
