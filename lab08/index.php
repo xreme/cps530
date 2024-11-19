@@ -13,9 +13,20 @@
            <div>
             <?php 
                 $hour= date("H");
-                if ($hour > 19){
+                if ($hour > 21 || $hour < 5){
                     echo "Good Night";
                 }
+                elseif ($hour > 17){
+                    echo "Good Evening"
+                }
+                elseif ($hour > 11){
+                    echo "Good Afternoon"
+                }
+                elseif ($hour > 4){
+                    echo "Good Morning"
+                }
+
+
                 echo 'the hour is ' . $hour ;
             ?>
            </div> 
