@@ -17,13 +17,13 @@
                     echo "Good Night";
                 }
                 elseif ($hour > 17){
-                    echo "Good Evening"
+                    echo "Good Evening";
                 }
                 elseif ($hour > 11){
-                    echo "Good Afternoon"
+                    echo "Good Afternoon";
                 }
                 elseif ($hour > 4){
-                    echo "Good Morning"
+                    echo "Good Morning";
                 }
 
 
