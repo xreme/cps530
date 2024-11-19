@@ -12,7 +12,7 @@
             </H1>
            <div>
             <?php 
-                echo 'the date is ' . date("m/y/d");
+                echo 'the date is ' . date("m/y/d/H/A");
             ?>
            </div> 
         </div>
