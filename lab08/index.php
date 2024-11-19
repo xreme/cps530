@@ -1,9 +1,24 @@
+<!DOCTYPE html>
 <html>
-<body>
+    <head> 
+        <title>
+            LAB 08
+        </title>
+    </head> 
+    <body>
+        <div>
+            <H1>
+                TASK 1
+            </H1>
+           <div>
+            <?php 
+                echo 'the date is ' date("m/y/d")
+            ?>
+           </div> 
+        </div>
+    </body>
 
-<?php 
-echo 'Test';
-?>
-
-</body>
 </html>
+
+
+
