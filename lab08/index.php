@@ -12,7 +12,10 @@
             </H1>
            <div>
             <?php 
-                $a= date("H");
+                $hour= date("H");
+                if ($hour > 19){
+                    echo "Good Night"
+                }
                 echo 'the hour is ' . $a ;
             ?>
            </div> 
