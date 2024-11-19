@@ -13,18 +13,25 @@
            <div>
             <?php 
                 $hour= date("H");
+
                 if ($hour > 21 || $hour < 5){
-                    echo "<h1>GOOD NIGHT</h1>";
+                    $message = "<h1>GOOD NIGHT</h1>";
                 }
                 elseif ($hour > 17){
-                    echo "<h1>GOOD EVENING</h1>";
+                    $message = "<h1>GOOD EVENING</h1>";
                 }
                 elseif ($hour > 11){
-                    echo "<h1>GOOD AFTERNOON</h1>";
+                    $message = "<h1>GOOD AFTERNOON</h1>";
                 }
                 elseif ($hour > 4){
-                    echo "<h1>GOOD MORNING</h1>";
+                    $message = "<h1>GOOD MORNING</h1>";
                 }
+                print <<<T1
+                <div>
+                THE MESSAGE IS
+                <br>
+                $message
+                T1;
 
             ?>
            </div> 
