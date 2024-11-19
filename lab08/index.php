@@ -16,7 +16,7 @@
                 if ($hour > 19){
                     echo "Good Night";
                 }
-                echo 'the hour is ' . $a ;
+                echo 'the hour is ' . $hour ;
             ?>
            </div> 
         </div>
