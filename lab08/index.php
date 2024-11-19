@@ -29,12 +29,14 @@
         $message = "<h1>GOOD MORNING</h1>";
         $image = "morning"
     }
-echo <<<T1
+
+    echo <<<T1
 <div class="$image">
 <br>
 $message
 </div>
 T1;
+
 ?>
            </div> 
         </div>
