@@ -31,8 +31,8 @@
                 THE MESSAGE IS
                 <br>
                 $message
+                </div>
                 T1;
-
             ?>
            </div> 
         </div>
