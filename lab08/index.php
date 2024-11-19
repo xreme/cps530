@@ -26,13 +26,13 @@
                 else{
                     $message = "<h1>GOOD MORNING</h1>";
                 }
-                echo <<<T1
-                <div>
-                THE MESSAGE IS
-                <br>
-                $message
-                </div>
-                T1;
+echo <<<T1
+<div>
+THE MESSAGE IS
+<br>
+$message
+</div>
+T1;
             ?>
            </div> 
         </div>
