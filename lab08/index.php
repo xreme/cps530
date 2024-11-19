@@ -33,7 +33,7 @@
     echo <<<T1
 <div class="$image">
 <br>
-$message
+<center><h1>$message<h1></center>
 </div>
 T1;
 
