@@ -1,4 +1,5 @@
 .afternoon{
     background-image: url("./images/afternoon.jpg");
     height: 500px;
+    background-size: cover;
 }
