@@ -7,6 +7,9 @@
         <link rel="stylesheet" href="./styles.css">
     </head> 
     <body>
+    <div>
+        <img src="images/corn.gif" id="hoverGif">
+    </div>
 <?php 
     $hour= date("H");
 

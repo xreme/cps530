@@ -4,6 +4,14 @@ body{
 h1{
 	font-size: 100px
 }
+#hoverGif{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    opacity: 0.6;
+    z-index: 100;
+    max-width: 200px;
+}
 .morning{
     background-image: url("./images/morning.jpeg");
     height: 800px;
