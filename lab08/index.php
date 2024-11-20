@@ -27,32 +27,44 @@
         $image = "morning";
     }
 
-    echo <<<T1
+echo <<<T1
 <div class="$image">
 <center><h1>$message</h1></center>
 </div>
 T1;
-
-if ($_SERVER["REQUEST_METHOD"] == "PSOT"){
-    $selectedGif = $_POST['gif'] ?? 'None';
-    echo "<div><h2>You selected: $selectedGif</h2></div>";
-}
-
 ?>
+<?php
+$chosenGif = $_POST['gif'];
+if ($chosenGif){
+	echo "posed:" . $chosenGif . "<br>";
+	$inADay = 60 * 60 * 24 + time();
+	setcookie('setGif', $chosenGif, $inADay);
+}
+?>
+<?php
+if(isset($_COOKIE['setGif']))
+{
+   $thanksgivingGif= $_COOKIE['setGif'];
+   echo "The set Gif is ". $thanksgivingGif;
+}
+else
+	   echo "Cookie not set or expired";
+?>
+
     <div>
-        <form>
+        <form action="https://www.cs.torontomu.ca/~osibazeb/cps530/lab08/index.php" method="post" id="thanksgiving">
             <h3>
                 Select a GIF
             </h3>
-            <input type="radio" name="gif" id="corn">
+            <input type="radio" name="gif" id="corn" value="corn">
             <label for="corn">Thanksgiving Corn</label><br>
-            <input type="radio" name="gif" id="pie">
+            <input type="radio" name="gif" id="pie" value="pie">
             <label for="pie">Thanksgiving Pie</label><br>
-            <input type="radio" name="gif" id="wreath">
+            <input type="radio" name="gif" id="wreath" value="wreath">
             <label for="wreath">Thanksgiving Wreath</label><br>
-            <input type="radio" name="gif" id="turkey1">
+            <input type="radio" name="gif" id="turkey1" value="turkey1">
             <label for="turkey1">Thanksgiving Turkey 1</label><br>
-            <input type="radio" name="gif" id="turkey2">
+            <input type="radio" name="gif" id="turkey2" value="turkey2">
             <label for="turkey2">Thanksgiving Turkey 2</label><br>
             <br>
             <input type="submit">
