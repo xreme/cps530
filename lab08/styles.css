@@ -1,8 +1,58 @@
+body{
+	background-color: #242424;
+}
+h1{
+	font-size: 100px
+}
+.morning{
+    background-image: url("./images/morning.jpeg");
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.morning h1{
+    color: white;
+    background-color: black;
+}
 .afternoon{
     background-image: url("./images/afternoon.jpg");
-    height: 500px;
+    height: 800px;
     background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .afternoon h1{
     color: white;
+    background-color: black;
+}
+.evening{
+   background-image: url("./images/evening.jpg"); 
+   height: 800px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.evening h1{
+    color: white;
+    background-color: black;
+}
+.night{
+    background-image: url("./images/night.jpg");
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.night h1{
+    color: white;
+    background-color: black;
 }

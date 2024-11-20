@@ -7,9 +7,6 @@
         <link rel="stylesheet" href="./styles.css">
     </head> 
     <body>
-        <div>
-            <H1>TASK 1</H1>
-           <div>
 <?php 
     $hour= date("H");
 
@@ -32,8 +29,7 @@
 
     echo <<<T1
 <div class="$image">
-<br>
-<center><h1>$message<h1></center>
+<center><h1>$message</h1></center>
 </div>
 T1;
 
