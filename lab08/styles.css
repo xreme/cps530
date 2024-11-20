@@ -4,6 +4,9 @@ body{
 h1{
 	font-size: 100px
 }
+h2{
+	font-size: 50px;
+}
 #hoverGif{
     position: fixed;
     top: 20px;
@@ -63,4 +66,11 @@ h1{
 .night h1{
     color: white;
     background-color: black;
+}
+p, h3, h2, label{
+    color: white;
+}
+form{
+	outline: 2px solid white;
+	padding: 15px;
 }

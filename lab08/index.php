@@ -7,9 +7,14 @@
         <link rel="stylesheet" href="./styles.css">
     </head> 
     <body>
-    <div>
-        <img src="images/corn.gif" id="hoverGif">
-    </div>
+<?php
+	if(isset($_COOKIE['setGif']))
+{
+   $thanksgivingGif= $_COOKIE['setGif'];
+   echo "<div> <img src='images/".$thanksgivingGif.".gif' id='hoverGif'> </div>";
+}
+?>
+
 <?php 
     $hour= date("H");
 
@@ -42,23 +47,13 @@ if ($chosenGif){
 	echo "posed:" . $chosenGif . "<br>";
 	$inADay = 60 * 60 * 24 + time();
 	setcookie('setGif', $chosenGif, $inADay);
+	header("Location: index.php");
 }
-?>
-<?php
-if(isset($_COOKIE['setGif']))
-{
-   $thanksgivingGif= $_COOKIE['setGif'];
-   echo "The set Gif is ". $thanksgivingGif;
-}
-else
-	   echo "Cookie not set or expired";
 ?>
 
     <div>
         <form action="https://www.cs.torontomu.ca/~osibazeb/cps530/lab08/index.php" method="post" id="thanksgiving">
-            <h3>
-                Select a GIF
-            </h3>
+            <h3> Select a GIF </h3>
             <input type="radio" name="gif" id="corn" value="corn">
             <label for="corn">Thanksgiving Corn</label><br>
             <input type="radio" name="gif" id="pie" value="pie">
@@ -73,11 +68,17 @@ else
             <input type="submit">
         </form>
     </div>
+	<?php
+	if(isset($_COOKIE['setGif']))
+	{
+	   $thanksgivingGif= $_COOKIE['setGif'];
+	   echo "<center><h2>THE SET GIF IS <mark>". $thanksgivingGif.".gif</mark></h2></center>";
+	}
+	else
+		   echo "<p>Cookie not set or expired</p>";
+	?>
            </div> 
         </div>
     </body>
 
 </html>
-
-
-
