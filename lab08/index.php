@@ -50,7 +50,42 @@ if ($chosenGif){
 	header("Location: index.php");
 }
 ?>
-
+<?php
+$int1 = $_POST['integer1'];
+$int2 = $_POST['integer2'];
+echo "$int1"
+echo "$int2"
+?>
+    <div>
+        <form action="https://www.cs.torontomu.ca/~osibazeb/cps530/lab08/index.php" method="post" id="multiplication">
+            <h3>
+            Multiplication tables
+            </h3>
+            <p>
+                Please enter two integers between 3 and 12. 
+            </p>
+            <div class="multiplication">
+                <div>
+                    <h3>
+                        INTEGER 1
+                    </h3>
+                    <input type="number" name="integer1">
+                </div>
+                <div>
+                <h2>x</h2> 
+                </div>
+                <div>
+                    <h3>
+                        INTEGER 2
+                    </h3>
+                    <input type="number" name="integer2">
+                </div>
+                <div>
+                    <input type="submit" class="submit">
+                </div>
+            </div>
+        </form>
+    </div>
     <div>
         <form action="https://www.cs.torontomu.ca/~osibazeb/cps530/lab08/index.php" method="post" id="thanksgiving">
             <h3> Select a GIF </h3>
