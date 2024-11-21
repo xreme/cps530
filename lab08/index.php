@@ -50,20 +50,15 @@ if ($chosenGif){
 	header("Location: index.php");
 }
 ?>
-<?php
-$int1 = $_POST['integer1'];
-$int2 = $_POST['integer2'];
-echo "$int1"
-echo "$int2"
-?>
-    <div>
-        <form action="https://www.cs.torontomu.ca/~osibazeb/cps530/lab08/index.php" method="post" id="multiplication">
+    <div id="task2">
+        <form action="lab08b.php"  method="post" id="multiplication" target="result">
             <h3>
             Multiplication tables
             </h3>
             <p>
                 Please enter two integers between 3 and 12. 
             </p>
+	    <p id="error"></p>
             <div class="multiplication">
                 <div>
                     <h3>
@@ -85,7 +80,41 @@ echo "$int2"
                 </div>
             </div>
         </form>
-    </div>
+
+	<script>
+		document.getElementById("multiplication").addEventListener("submit", function (event) {
+		    const integer1Element = document.querySelector("input[name='integer1']");
+		    const integer2Element = document.querySelector("input[name='integer2']");
+		    const integer1 = integer1Element.value;
+		    const integer2 = integer2Element.value;
+		    const num1 = parseInt(integer1, 10);
+		    const num2 = parseInt(integer2, 10);
+		    let isValid = true;
+		    let errorMessage = "";
+
+		    if (isNaN(num1) || num1 < 3 || num1 > 12) {
+			isValid = false;
+			errorMessage += "INTEGER 1 must be an integer between 3 and 12.<br>";
+		    }
+		    if (isNaN(num2) || num2 < 3 || num2 > 12) {
+			isValid = false;
+			errorMessage += "INTEGER 2 must be an integer between 3 and 12.<br>";
+		    }
+		    const errorElement = document.getElementById("error");
+		    if (!isValid) {
+			errorElement.innerHTML = errorMessage;
+			integer2Element.value = ""; 
+			integer1Element.value = "";
+			event.preventDefault(); 
+		    } else {
+			errorElement.innerHTML = "";
+		    }
+		});
+
+	</script>
+
+	<iframe src="lab08b.php" name="result"></iframe> 
+
     <div>
         <form action="https://www.cs.torontomu.ca/~osibazeb/cps530/lab08/index.php" method="post" id="thanksgiving">
             <h3> Select a GIF </h3>
@@ -103,6 +132,7 @@ echo "$int2"
             <input type="submit">
         </form>
     </div>
+    </div>
 	<?php
 	if(isset($_COOKIE['setGif']))
 	{
@@ -110,7 +140,7 @@ echo "$int2"
 	   echo "<center><h2>THE SET GIF IS <mark>". $thanksgivingGif.".gif</mark></h2></center>";
 	}
 	else
-		   echo "<p>Cookie not set or expired</p>";
+		   echo "<center><h2>GIF NOT SET</h2></center>";
 	?>
            </div> 
         </div>

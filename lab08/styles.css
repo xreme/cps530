@@ -67,15 +67,26 @@ h2{
     color: white;
     background-color: black;
 }
-p, h3, h2, label{
+p, h3, h2, label, td, tr{
     color: white;
 }
 form{
-	outline: 2px solid white;
 	padding: 15px;
 }
 .multiplication{
     display: flex;
     gap: 25px;
     align-items: center;
+}
+.table{
+	margin: 10px;
+	border-spacing: 3px;
+}
+#task2{
+	display:flex;
+	justify-content: center;
+	outline: 2px solid white;
+}
+#thanksgiving{
+
 }
