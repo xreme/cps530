@@ -5,6 +5,18 @@
         <script>
             function submitForm(type) {
                 const form = document.getElementById('locationForm');
+                const city = form.elements['city'].value;
+                const country = form.elements['country'].value;
+                const imageUrl = form.elements['image_url'].value;
+                const errorMsg = document.getElementById('errorTxt');
+        
+                if (!city || !country || !imageUrl) {
+                    errorMsg.textContent = 'Please fill out City, Country and Image ';
+                    errorMsg.style.color = 'darkred';
+                    return false;
+                }
+        
+                errorMsg.textContent = '';
                 form.action = type;
                 form.submit();
             }
@@ -79,6 +91,7 @@
     <body>
         <div>
             <h1>LAB 10B</h1>
+            <p id="errorTxt"></p>
             <form id="locationForm" method="post">
                 <label>City Name</label>
                 <input type="text" name="city">
