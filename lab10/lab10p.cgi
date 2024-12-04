@@ -44,7 +44,9 @@ print("""<!DOCTYPE html>
       width: 80%;
       height: auto;
       filter: sepia(0.7) brightness(0.9); 
-      border: 10 px solid #5a3921;
+      border: 40px solid #5a3921;
+      margin: 10px;
+      border-radius: 15px;
     }
   </style>
 </head>
