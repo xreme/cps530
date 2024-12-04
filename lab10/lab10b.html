@@ -1,35 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <Title>Lab 10b</Title>
+        <title>Lab 10b</title>
         <script>
-            function submitForm(type){
-                const form = document.getElementById('locationForm')
+            function submitForm(type) {
+                const form = document.getElementById('locationForm');
                 form.action = type;
                 form.submit();
             }
         </script>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Georgia', serif;
+                background-color: #f9f5e7;
+                color: #5a3921; 
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            div {
+                background-color: #d4c8b0;
+                border: 5px solid #5a3921;
+                padding: 20px;
+                width: 90%;
+                max-width: 600px;
+                box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4);
+                border-radius: 8px; 
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 3rem;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            label {
+                margin-bottom: 8px;
+                font-size: 1.2rem;
+            }
+
+            input[type="text"] {
+                margin-bottom: 20px;
+                padding: 10px;
+                font-size: 1rem;
+                border: 1px solid #5a3921;
+                border-radius: 4px;
+                background-color: white;
+                color: #5a3921;
+            }
+
+            input[type="button"] {
+                background-color: #5a3921;
+                color: #f9f5e7; 
+                border: none;
+                padding: 10px 20px;
+                margin: 5px 0;
+                font-size: 1rem;
+                cursor: pointer;
+                border-radius: 4px;
+                transition: background-color 0.3s ease;
+            }
+
+            input[type="button"]:hover {
+                background-color: #3c2918;
+            }
+        </style>
     </head>
     <body>
         <div>
             <h1>LAB 10B</h1>
-
             <form id="locationForm" method="post">
                 <label>City Name</label>
                 <input type="text" name="city">
-                <br> 
-                <label>Pronvice / State</label>
+                
+                <label>Province / State</label>
                 <input type="text" name="province">
-                <br> 
+                
                 <label>Country</label>
                 <input type="text" name="country">
-                <br> 
+                
                 <label>Image URL</label>
                 <input type="text" name="image_url">
-                <br>
+                
                 <label>How would you like to submit?</label>
-                <input type="button" value="Ruby" onclick="submitForm('https://www2.cs.torontomu.ca/~osibazeb/cgi-bin/lab10r.cgi')">
-                <input type="button" value="Python" onclick="submitForm('lab10p.cgi')">
+                <input type="button" value="Ruby" onclick="submitForm('ruby.cgi')">
+                <input type="button" value="Python" onclick="submitForm('python.cgi')">
             </form>
         </div>
     </body>
