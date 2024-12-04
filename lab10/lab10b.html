@@ -3,7 +3,7 @@
     <head>
         <Title>Lab 10b</Title>
         <script>
-            function submit(type){
+            function submitForm(type){
                 const form = document.getElementById('locationForm')
                 form.action = type;
                 form.submit();
@@ -28,8 +28,8 @@
                 <input type="text" name="image_url">
                 <br>
                 <label>How would you like to submit?</label>
-                <input type="button" value="Ruby" onclick="submit('lab10r.cgi')">
-                <input type="button" value="Python" onclick="submit('lab10p.cgi')">
+                <input type="button" value="Ruby" onclick="submitForm('https://www2.cs.torontomu.ca/~osibazeb/cgi-bin/lab10r.cgi')">
+                <input type="button" value="Python" onclick="submitForm('lab10p.cgi')">
             </form>
         </div>
     </body>
